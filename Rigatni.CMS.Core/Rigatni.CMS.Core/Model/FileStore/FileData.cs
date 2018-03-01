@@ -1,9 +1,11 @@
-﻿namespace Rigatni.CMS.Core.Model.FileStore
-{
-    public class FileData
-    {
-        public byte[] FileDataContent { get; set; }
+﻿using Riganti.Utils.Infrastructure.Core;
 
-        public FileVersion MyProperty { get; set; }
+namespace Rigatni.CMS.Core.Model.FileStore
+{
+    public class FileData : IEntity<int>
+    {
+        public int Id { get; set; }
+        public byte[] FileDataContent { get; set; }
+        public FileVersion FileVersion { get; set; }
     }
 }
