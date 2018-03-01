@@ -1,7 +1,7 @@
 ﻿using Riganti.Utils.Infrastructure.Core;
 using System.Collections.Generic;
 
-namespace Rigatni.CMS.Core.Model.FileStore
+namespace Rigatni.CMS.DAL.Model.FileStore
 {
     public class FileStore : IEntity<int>
     {

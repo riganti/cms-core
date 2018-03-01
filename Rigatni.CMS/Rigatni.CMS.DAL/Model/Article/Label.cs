@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Rigatni.CMS.Core.Model.Article
+namespace Rigatni.CMS.DAL.Model.Article
 {
     public class Label : IEntity<int>
     {

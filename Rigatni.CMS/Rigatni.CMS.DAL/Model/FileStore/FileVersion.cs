@@ -1,6 +1,6 @@
 ﻿using Riganti.Utils.Infrastructure.Core;
 
-namespace Rigatni.CMS.Core.Model.FileStore
+namespace Rigatni.CMS.DAL.Model.FileStore
 {
     public class FileVersion : IEntity<int>
     {

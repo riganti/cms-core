@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Rigatni.CMS.Core.Model;
-using Rigatni.CMS.Core.Model.Article;
-using Rigatni.CMS.Core.Model.FileStore;
+using Rigatni.CMS.DAL.Model.Article;
+using Rigatni.CMS.DAL.Model.FileStore;
 using Rigatni.CMS.DAL.Model.Survey;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Rigatni.CMS.Core
+namespace Rigatni.CMS.DAL
 {
     public class CmsDbContext : DbContext
     {

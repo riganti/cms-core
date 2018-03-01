@@ -2,7 +2,7 @@
 using Rigatni.CMS.DAL.Model.Rating;
 using System.Collections.Generic;
 
-namespace Rigatni.CMS.Core.Model.FileStore
+namespace Rigatni.CMS.DAL.Model.FileStore
 {
     public class FileStoreItem : IEntity<int>
     {
@@ -10,6 +10,5 @@ namespace Rigatni.CMS.Core.Model.FileStore
         public List<FileStoreItem> ChildFileStoreItems { get; set; }
         public RatedItem Rating { get; set; }
         public FileData FileData { get; set; }
-
     }
 }

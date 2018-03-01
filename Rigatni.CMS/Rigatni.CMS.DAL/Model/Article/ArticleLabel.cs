@@ -3,14 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Rigatni.CMS.Core.Model.Article
+namespace Rigatni.CMS.DAL.Model.Article
 {
-    public class ArticleVersion : IEntity<int>
+    public class ArticleLabel : IEntity<int>
     {
         public int Id { get; set; }
-
+        public string Value { get; set; }
         public Article Article { get; set; }
-
-        public Language Language { get; set; }
+        public Label Label { get; set; }
     }
 }
