@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigatni.CMS.Core", "Rigatni.CMS.Core\Rigatni.CMS.Core.csproj", "{A29DBADD-0E51-4DC1-AB36-204C82BD7811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rigatni.CMS.DAL", "Rigatni.CMS.Core\Rigatni.CMS.DAL.csproj", "{A29DBADD-0E51-4DC1-AB36-204C82BD7811}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
