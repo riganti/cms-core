@@ -11,6 +11,6 @@ namespace Rigatni.CMS.DAL.Model.Survey
 
         public List<SurveyQuestion> Questions { get; set; }
 
-        public List<SurveyAnswers> Answers { get; set; }
+        public List<SurveyAnswer> Answers { get; set; }
     }
 }

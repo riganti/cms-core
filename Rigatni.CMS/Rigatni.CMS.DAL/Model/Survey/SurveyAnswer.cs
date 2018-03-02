@@ -2,7 +2,7 @@
 
 namespace Rigatni.CMS.DAL.Model.Survey
 {
-    public class SurveyAnswers : IEntity<int>
+    public class SurveyAnswer : IEntity<int>
     {
         public int Id { get; set; }
         public string Text { get; set; }

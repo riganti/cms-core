@@ -14,9 +14,11 @@ namespace Rigatni.CMS.DAL
         public DbSet<Label> Labels { get; set; }
         public DbSet<FileStore> FileStores { get; set; }
         public DbSet<Survey> Surveys { get; set; }
+        public DbSet<SurveyStatistic> SurveyStatistics { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            Database.Migrate();
             modelBuilder.HasDefaultSchema("CMS");
         }
     }
