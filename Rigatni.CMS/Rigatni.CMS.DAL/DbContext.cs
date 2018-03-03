@@ -16,6 +16,15 @@ namespace Rigatni.CMS.DAL
         public DbSet<Survey> Surveys { get; set; }
         public DbSet<SurveyStatistic> SurveyStatistics { get; set; }
 
+        public CmsDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
+        public CmsDbContext()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             Database.Migrate();

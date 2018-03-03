@@ -1,7 +1,9 @@
 ﻿using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Riganti.CMS.BL.Facades;
 using Riganti.Utils.Infrastructure.AutoMapper;
 using Riganti.Utils.Infrastructure.Core;
 using Riganti.Utils.Infrastructure.EntityFrameworkCore;
@@ -19,7 +21,7 @@ namespace Riganti.CMS.BL.Installers
         {
             container.Register(
 
-                  Component.For<Func<DbContext>>()
+                Component.For<Func<DbContext>>()
                     .Instance(() => new CmsDbContext())
                     .LifestyleSingleton(),
 
@@ -34,7 +36,31 @@ namespace Riganti.CMS.BL.Installers
 
                 Component.For(typeof(IEntityDTOMapper<,>))
                     .ImplementedBy(typeof(EntityDTOMapper<,>))
-                    .LifestyleSingleton()
+                    .LifestyleSingleton(),
+                Component.For<IDateTimeProvider>()
+                    .ImplementedBy<LocalDateTimeProvider>()
+                    .LifestyleTransient(),
+
+                Classes.FromAssemblyContaining<AppFacadeBase>()
+                    .BasedOn<AppFacadeBase>()
+                    .LifestyleTransient(),
+
+                 Classes.FromAssemblyContaining<AppFacadeBase>()
+                    .BasedOn(typeof(AppCrudFacadeBase<,,,,>))
+                    .LifestyleTransient(),
+
+                 Classes.FromAssemblyContaining<AppFacadeBase>()
+                    .BasedOn(typeof(IQuery<,>))
+                    .LifestyleTransient(),
+
+                 Classes.FromAssemblyContaining<AppFacadeBase>()
+                    .BasedOn(typeof(IQuery<>))
+                    .LifestyleTransient(),
+                Classes.FromAssemblyContaining<AppFacadeBase>()
+                    .BasedOn(typeof(AppCrudFacadeBase<,,,>))
+                    .LifestyleTransient()
+
+
 
                 );
         }

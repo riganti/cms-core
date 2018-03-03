@@ -5,10 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTO\" />
-    <Folder Include="Facades\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
