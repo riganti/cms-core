@@ -10,7 +10,7 @@ namespace Riganti.CMS.BL.Facades
     public abstract class AppCrudFacadeBase<TEntity, TKey, TListDTO, TDetailDTO> : CrudFacadeBase<TEntity, TKey, TListDTO, TDetailDTO> where TEntity : IEntity<TKey> where TDetailDTO : IEntity<TKey>
     {
 
-        public AppCrudFacadeBase(IQuery<TListDTO> query, IRepository<TEntity, TKey> repository, IEntityDTOMapper<TEntity, TDetailDTO> mapper) : base(query, repository, mapper)
+        public AppCrudFacadeBase(Func<IQuery<TListDTO>> query, IRepository<TEntity, TKey> repository, IEntityDTOMapper<TEntity, TDetailDTO> mapper) : base(query, repository, mapper)
         {
         }
 
@@ -21,7 +21,7 @@ namespace Riganti.CMS.BL.Facades
     public abstract class AppCrudFacadeBase<TEntity, TKey, TListDTO, TDetailDTO, TFilterDTO> : FilteredCrudFacadeBase<TEntity, TKey, TListDTO, TDetailDTO, TFilterDTO> where TEntity : IEntity<TKey> where TDetailDTO : IEntity<TKey>
     {
 
-        public AppCrudFacadeBase(IFilteredQuery<TListDTO, TFilterDTO> query, IRepository<TEntity, TKey> repository, IEntityDTOMapper<TEntity, TDetailDTO> mapper) : base(query, repository, mapper)
+        public AppCrudFacadeBase(Func<IFilteredQuery<TListDTO, TFilterDTO>> query, IRepository<TEntity, TKey> repository, IEntityDTOMapper<TEntity, TDetailDTO> mapper) : base(query, repository, mapper)
         {
         }
 

@@ -3,6 +3,7 @@ using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Riganti.CMS.BL.Facades;
 using Riganti.Utils.Infrastructure.AutoMapper;
 using Riganti.Utils.Infrastructure.Core;
@@ -21,8 +22,8 @@ namespace Riganti.CMS.BL.Installers
         {
             container.Register(
 
-                Component.For<Func<DbContext>>()
-                    .Instance(() => new CmsDbContext())
+                 Component.For<Func<DbContext>>()
+                    .Instance(() => (container.Resolve<IServiceProvider>() as IServiceProvider).GetRequiredService<CmsDbContext>())
                     .LifestyleSingleton(),
 
                 Component.For<IUnitOfWorkProvider>()

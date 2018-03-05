@@ -27,7 +27,6 @@ namespace Rigatni.CMS.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            Database.Migrate();
             modelBuilder.HasDefaultSchema("CMS");
         }
     }
