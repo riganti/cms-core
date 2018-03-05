@@ -8,7 +8,7 @@ namespace Rigatni.CMS.DAL.Model.Rating
     public class Rating : IEntity<int>
     {
         public int Id { get; set; }
-        public int MaximumValue { get; set; }
+
         public int SelectedValue { get; set; }
     }
 }

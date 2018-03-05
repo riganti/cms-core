@@ -6,7 +6,7 @@ namespace Rigatni.CMS.DAL.Model.Article
 {
     public enum Language
     {
-        Cs,
-        En
+        Cs = 1,
+        En = 2
     }
 }

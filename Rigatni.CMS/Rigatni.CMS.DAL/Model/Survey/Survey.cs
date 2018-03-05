@@ -9,8 +9,10 @@ namespace Rigatni.CMS.DAL.Model.Survey
     {
         public int Id { get; set; }
 
+        public string Title { get; set; }
+        public string Description { get; set; }
+
         public List<SurveyQuestion> Questions { get; set; }
 
-        public List<SurveyAnswer> Answers { get; set; }
     }
 }

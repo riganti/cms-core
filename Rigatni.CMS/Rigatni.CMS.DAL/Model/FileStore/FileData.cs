@@ -1,5 +1,6 @@
 ﻿using Riganti.Utils.Infrastructure.Core;
 using Rigatni.CMS.DAL.Model.FileStore;
+using System.Collections.Generic;
 
 namespace Rigatni.CMS.DAL.Model.FileStore
 {
@@ -7,6 +8,6 @@ namespace Rigatni.CMS.DAL.Model.FileStore
     {
         public int Id { get; set; }
         public byte[] FileDataContent { get; set; }
-        public FileVersion FileVersion { get; set; }
+        public List<FileVersion> FileVersion { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Riganti.Utils.Infrastructure.Core;
+using System;
 
 namespace Rigatni.CMS.DAL.Model.FileStore
 {
@@ -6,5 +7,6 @@ namespace Rigatni.CMS.DAL.Model.FileStore
     {
         public int Id { get; set; }
         public FileStoreItem File { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

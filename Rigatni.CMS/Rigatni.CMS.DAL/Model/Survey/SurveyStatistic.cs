@@ -11,6 +11,6 @@ namespace Rigatni.CMS.DAL.Model.Survey
         public Survey Survey { get; set; }
         public SurveyQuestion SurveyQuestion { get; set; }
         public SurveyAnswer SurveyAnswer { get; set; }
-        public bool AnsweredCorrect { get; set; }
+        public bool? AnsweredCorrect { get; set; }
     }
 }

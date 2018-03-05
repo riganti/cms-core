@@ -12,6 +12,11 @@ namespace Rigatni.CMS.DAL.Model.Article
     {
         public int Id { get; set; }
 
+        public string ArticleTitle { get; set; }
+
+        [Column(TypeName = "text")]
+        public string  ArticleLead { get; set; }
+
         [Column(TypeName = "text")]
         public string ArticleText { get; set; }
 
@@ -19,7 +24,7 @@ namespace Rigatni.CMS.DAL.Model.Article
 
         public string ThumbnailImageUrl { get; set; }
 
-        public ArticleLabel ArticleLabel { get; set; }
+        public List<ArticleLabel> ArticleLabel { get; set; }
 
         public DateTime? PublishedDate { get; set; }
     }

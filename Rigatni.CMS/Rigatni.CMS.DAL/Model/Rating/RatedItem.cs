@@ -9,6 +9,8 @@ namespace Rigatni.CMS.DAL.Model.Rating
     {
         public int Id { get; set; }
         public List<Rating> Ratings { get; set; }
+        public int MaximumValue { get; set; }
+        public int MinimumValue { get; set; }
     }
 
 }
